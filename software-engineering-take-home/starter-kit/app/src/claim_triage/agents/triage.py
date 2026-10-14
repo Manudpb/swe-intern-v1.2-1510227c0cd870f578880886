@@ -67,7 +67,6 @@ def run(
             messages=messages,
             tools=tools,
             max_tokens=deps.settings.llm_max_tokens,
-            temperature=0.0,
         )
         call = response.first_tool_call
         if call is None:

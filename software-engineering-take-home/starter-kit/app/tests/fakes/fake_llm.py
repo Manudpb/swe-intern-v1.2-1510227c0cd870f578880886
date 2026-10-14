@@ -64,7 +64,8 @@ class FakeLLM:
         messages: list[dict[str, Any]],
         tools: list[dict[str, Any]],
         max_tokens: int,
-        temperature: float = 0.0,
+        tool_choice: dict[str, Any] | None = None,
+        **extra: Any,
     ) -> LLMResponse:
         route = self._route(system)
         self.calls.append(
@@ -74,11 +75,12 @@ class FakeLLM:
                 "messages": messages,
                 "tools": tools,
                 "max_tokens": max_tokens,
-                "temperature": temperature,
+                "tool_choice": tool_choice,
+                "extra": dict(extra),
                 "model": getattr(self, "model", "claude-opus-5"),
             }
         )
-        self._validate_request(messages, tools, max_tokens)
+        self._validate_request(messages, tools, max_tokens, extra, tool_choice)
 
         queue = self.script.get(route)
         if not queue:
@@ -116,8 +118,35 @@ class FakeLLM:
         return match.group(1)
 
     def _validate_request(
-        self, messages: list[dict[str, Any]], tools: list[dict[str, Any]], max_tokens: int
+        self,
+        messages: list[dict[str, Any]],
+        tools: list[dict[str, Any]],
+        max_tokens: int,
+        extra: dict[str, Any] | None = None,
+        tool_choice: dict[str, Any] | None = None,
     ) -> None:
+        # 10. a tool_choice must name a tool that was actually declared.
+        if tool_choice:
+            kind = tool_choice.get("type")
+            if kind not in ("auto", "any", "tool"):
+                raise FakeLLMContractError(f"unknown tool_choice type {kind!r}")
+            if kind == "tool":
+                declared = {tool.get("name") for tool in tools or []}
+                if tool_choice.get("name") not in declared:
+                    raise FakeLLMContractError(
+                        f"tool_choice names {tool_choice.get('name')!r}, which is not declared "
+                        f"in tools {sorted(str(n) for n in declared)}"
+                    )
+        # 9. temperature is rejected by the approved model with HTTP 400. Found the hard way
+        # on the first live triage; encoded here so it can never reach a paid call again.
+        if extra and "temperature" in extra:
+            raise FakeLLMContractError(
+                "`temperature` is deprecated for this model and the gateway rejects the "
+                "request with HTTP 400; do not send it"
+            )
+        if extra:
+            raise FakeLLMContractError(f"unexpected request fields: {sorted(extra)}")
+
         # 1. max_tokens is required by the Messages API.
         if not isinstance(max_tokens, int) or max_tokens <= 0:
             raise FakeLLMContractError(f"max_tokens must be a positive int, got {max_tokens!r}")

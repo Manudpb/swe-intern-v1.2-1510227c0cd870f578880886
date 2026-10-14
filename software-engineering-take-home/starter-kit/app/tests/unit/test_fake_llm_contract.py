@@ -54,6 +54,23 @@ def test_a_prefixed_model_route_is_rejected(model):
         _call(llm)
 
 
+# --- rule 9 -------------------------------------------------------------------------
+
+
+def test_sending_temperature_is_rejected():
+    """The approved model answers HTTP 400: "`temperature` is deprecated for this model".
+
+    Found by the first live triage. Encoded here so it cannot reach a paid call again.
+    """
+    with pytest.raises(FakeLLMContractError, match="temperature"):
+        _call(_llm(), temperature=0.0)
+
+
+def test_any_unexpected_request_field_is_rejected():
+    with pytest.raises(FakeLLMContractError, match="unexpected request fields"):
+        _call(_llm(), top_p=0.9)
+
+
 # --- rule 3 -------------------------------------------------------------------------
 
 
@@ -208,3 +225,21 @@ def test_the_default_script_covers_every_route_the_pipeline_uses():
 
     assert set(script) == {"intake", "triage", "safety"}
     assert script["safety"], "the safety gate runs on every triage (research D9)"
+
+
+# --- rule 10 ------------------------------------------------------------------------
+
+
+def test_a_tool_choice_naming_an_undeclared_tool_is_rejected():
+    """Forcing a tool the request never declared is an HTTP 400 at the gateway."""
+    with pytest.raises(FakeLLMContractError, match="not declared"):
+        _call(_llm(), tool_choice={"type": "tool", "name": "no_such_tool"})
+
+
+def test_an_unknown_tool_choice_type_is_rejected():
+    with pytest.raises(FakeLLMContractError, match="unknown tool_choice type"):
+        _call(_llm(), tool_choice={"type": "magic"})
+
+
+def test_forcing_a_declared_tool_is_accepted():
+    assert _call(_llm(), tool_choice={"type": "tool", "name": "t"}).text_blocks == ["ok"]

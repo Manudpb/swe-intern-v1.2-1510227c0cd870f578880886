@@ -1,0 +1,193 @@
+{
+  "mode": "full",
+  "complete": true,
+  "attempted": 35,
+  "expected": 35,
+  "returned": 35,
+  "failed": 0,
+  "p50_attempt_ms": 48315.6,
+  "p50_returned_ms": 48315.6,
+  "metrics": {
+    "damage": 0.9714285714285714,
+    "severity": 0.8142857142857143,
+    "cost": 0.5221653346653347
+  },
+  "note": "Client end-to-end timings include application, models, tools and network. Smoke is not a full grade.",
+  "cases": {
+    "IMG_001": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 50842.6
+    },
+    "IMG_002": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 29473.0
+    },
+    "IMG_003": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 48315.6
+    },
+    "IMG_004": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 44069.9
+    },
+    "IMG_005": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 55671.1
+    },
+    "IMG_006": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 42199.6
+    },
+    "IMG_007": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 44259.3
+    },
+    "IMG_008": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 43905.1
+    },
+    "IMG_009": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 52892.0
+    },
+    "IMG_010": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 47968.6
+    },
+    "IMG_011": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 53870.5
+    },
+    "IMG_012": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 65753.8
+    },
+    "IMG_013": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 72605.7
+    },
+    "IMG_014": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 51201.7
+    },
+    "IMG_015": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 40322.5
+    },
+    "IMG_016": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 44778.2
+    },
+    "IMG_017": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 42955.2
+    },
+    "IMG_018": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 53865.1
+    },
+    "IMG_019": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 56663.7
+    },
+    "IMG_020": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 46929.7
+    },
+    "IMG_021": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 55379.2
+    },
+    "IMG_022": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 58504.9
+    },
+    "IMG_023": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 48008.2
+    },
+    "IMG_024": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 51810.5
+    },
+    "IMG_025": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 46054.6
+    },
+    "IMG_026": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 46826.4
+    },
+    "IMG_027": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 53414.6
+    },
+    "IMG_028": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 49721.9
+    },
+    "IMG_029": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 48533.5
+    },
+    "IMG_030": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 38848.9
+    },
+    "IMG_031": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 54927.7
+    },
+    "IMG_032": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 39147.6
+    },
+    "IMG_033": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 51936.3
+    },
+    "IMG_034": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 32232.8
+    },
+    "IMG_035": {
+      "status": "returned",
+      "http_status": 200,
+      "duration_ms": 43509.2
+    }
+  }
+}

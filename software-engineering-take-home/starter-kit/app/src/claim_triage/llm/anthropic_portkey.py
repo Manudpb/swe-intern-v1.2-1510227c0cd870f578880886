@@ -7,6 +7,9 @@ works against the live gateway (research D1):
     model    = the route's part after "/"    unprefixed; a prefixed route 404s here
     headers  = x-portkey-api-key + x-portkey-provider
 
+`temperature` is deliberately never sent: the approved model rejects it with HTTP 400
+("`temperature` is deprecated for this model"), found by the first live triage.
+
 Retry policy (research D8, constitution Principle III): at most ONE retry, only for
 502/503/529 and timeouts. Never for 429/401/403 — looping on an exhausted allowance is
 forbidden, so a 429 surfaces immediately and tells the operator to pause.
@@ -53,7 +56,7 @@ class AnthropicPortkeyClient:
         messages: list[dict[str, Any]],
         tools: list[dict[str, Any]],
         max_tokens: int,
-        temperature: float = 0.0,
+        tool_choice: dict[str, Any] | None = None,
     ) -> LLMResponse:
         attempt = 0
         while True:
@@ -63,12 +66,13 @@ class AnthropicPortkeyClient:
                     system=system,
                     messages=messages,
                     tools=tools or self._anthropic.NOT_GIVEN,
+                    tool_choice=tool_choice or self._anthropic.NOT_GIVEN,
                     max_tokens=max_tokens,
-                    temperature=temperature,
                 )
                 return _to_response(raw)
             except Exception as exc:  # noqa: BLE001 - normalized into LLMUnavailable below
                 status = getattr(exc, "status_code", None)
+                _log_upstream_detail(exc, status)
                 if status in NEVER_RETRY_STATUS:
                     raise LLMUnavailable(_message_for(status), status=status) from None
                 retryable = status in RETRYABLE_STATUS or status is None
@@ -81,6 +85,11 @@ class AnthropicPortkeyClient:
 
 
 def _message_for(status: int | None) -> str:
+    if status == 400:
+        return (
+            "The model gateway rejected the request shape (HTTP 400). This is a client-side "
+            "error, not a network problem; see the logged upstream detail"
+        )
     if status in (401, 403):
         return "Model access denied; check the key, gateway and approved route (no retry attempted)"
     if status == 404:
@@ -90,6 +99,21 @@ def _message_for(status: int | None) -> str:
     if status in RETRYABLE_STATUS:
         return f"Model provider unavailable (HTTP {status}) after one retry"
     return "Cannot reach the model gateway (network, TLS or timeout) after one retry"
+
+
+def _log_upstream_detail(exc: Exception, status: int | None) -> None:
+    """Record what the gateway actually said, so a 4xx is diagnosable.
+
+    The provider's error body describes the request, never the credential. Truncated because
+    a validation error can be long.
+    """
+    detail = getattr(exc, "body", None)
+    if detail is None:
+        response = getattr(exc, "response", None)
+        detail = getattr(response, "text", None)
+    if detail is None:
+        detail = f"{type(exc).__name__}: {exc}"
+    log.warning("Gateway rejected the request (status=%s): %s", status, str(detail)[:600])
 
 
 def _to_response(raw: Any) -> LLMResponse:

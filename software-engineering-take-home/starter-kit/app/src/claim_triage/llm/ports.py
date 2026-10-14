@@ -48,5 +48,9 @@ class LLMClient(Protocol):
         messages: list[dict[str, Any]],
         tools: list[dict[str, Any]],
         max_tokens: int,
-        temperature: float = 0.0,
+        tool_choice: dict[str, Any] | None = None,
     ) -> LLMResponse: ...
+
+    # NOTE: no `temperature`. The approved model (claude-opus-5) rejects it with
+    # HTTP 400 "`temperature` is deprecated for this model", so it is not part of
+    # this seam at all rather than being accepted and silently dropped.

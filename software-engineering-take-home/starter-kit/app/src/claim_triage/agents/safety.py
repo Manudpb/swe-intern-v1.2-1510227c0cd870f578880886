@@ -169,7 +169,7 @@ def rule_scan(damage_description: str, recommendation: str, *, cost_text: str = 
 
 
 def llm_review(deps: Deps, damage_description: str, recommendation: str) -> Verdict:
-    """One small call: no thinking, temperature 0, 300 tokens, text only (research D9)."""
+    """One small call: no thinking, 300 tokens, text only, no temperature (research D9)."""
     payload = (
         f"damage_description:\n{damage_description}\n\nrecommendation:\n{recommendation}"
     )
@@ -177,8 +177,8 @@ def llm_review(deps: Deps, damage_description: str, recommendation: str) -> Verd
         system=REVIEW_PROMPT,
         messages=[{"role": "user", "content": [{"type": "text", "text": payload}]}],
         tools=[VERDICT_TOOL],
+        tool_choice={"type": "tool", "name": VERDICT_TOOL["name"]},
         max_tokens=deps.settings.safety_max_tokens,
-        temperature=0.0,
     )
     call = next((c for c in response.tool_calls if c.name == VERDICT_TOOL["name"]), None)
     if call is None:
@@ -293,8 +293,8 @@ def _rewrite(
             system=REWRITE_PROMPT,
             messages=[{"role": "user", "content": [{"type": "text", "text": payload}]}],
             tools=[REWRITE_TOOL],
+            tool_choice={"type": "tool", "name": REWRITE_TOOL["name"]},
             max_tokens=deps.settings.llm_max_tokens,
-            temperature=0.0,
         )
     except Exception:  # noqa: BLE001 - a failed rewrite falls through to sanitization
         log.warning("Safety rewrite call failed; falling through to sanitization")

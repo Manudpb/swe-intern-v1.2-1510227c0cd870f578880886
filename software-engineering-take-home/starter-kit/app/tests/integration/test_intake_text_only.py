@@ -46,3 +46,17 @@ def test_intake_is_not_asked_about_image_quality_without_an_image(make_client):
     assert all(block.get("type") != "image" for block in blocks)
     text = " ".join(b.get("text", "") for b in blocks)
     assert "No photograph was submitted" in text
+
+
+def test_the_intake_verdict_tool_is_forced(make_client, damage_photo):
+    """A prose reply instead of a verdict would fail the screen open; forcing prevents it."""
+    from tests.fakes import FakeLLM
+    from tests.fakes.scripts.scenarios import clean_triage
+
+    llm = FakeLLM(clean_triage())
+    client, _ = make_client(llm=llm)
+
+    submit(client, images=[damage_photo], description="Burst pipe in the kitchen")
+
+    call = llm.calls_for("intake")[0]
+    assert call["tool_choice"] == {"type": "tool", "name": "report_intake_validation"}

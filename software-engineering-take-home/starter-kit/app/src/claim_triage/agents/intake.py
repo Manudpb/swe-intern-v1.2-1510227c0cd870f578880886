@@ -98,8 +98,8 @@ def validate(
         system=PROMPT,
         messages=[{"role": "user", "content": content}],
         tools=[TOOL],
+        tool_choice={"type": "tool", "name": TOOL_NAME},
         max_tokens=deps.settings.safety_max_tokens,
-        temperature=0.0,
     )
 
     call = next((c for c in response.tool_calls if c.name == TOOL_NAME), None)
