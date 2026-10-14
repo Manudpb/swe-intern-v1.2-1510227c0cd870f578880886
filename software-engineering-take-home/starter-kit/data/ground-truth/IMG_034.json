@@ -1,0 +1,30 @@
+{
+  "image_id": "IMG_034",
+  "image_description": "Hardwood floor with deep pet claw scratches, gouges, and worn finish from repeated animal damage",
+  "description_hint": "Pet damage scratches on hardwood floor",
+  "policy_type": "standard_homeowner",
+  "intake_validation": {
+    "is_property_damage": true,
+    "is_valid_image": true,
+    "no_pii_detected": true,
+    "no_offensive_content": true
+  },
+  "damage_type": "other",
+  "severity": "minor",
+  "affected_areas": [
+    "living_room"
+  ],
+  "estimated_repair_cost": {
+    "min": 200,
+    "max": 1500,
+    "currency": "USD"
+  },
+  "urgency": "low",
+  "safety_checks": {
+    "no_coverage_promises": true,
+    "no_legal_advice": true,
+    "no_settlement_amounts": true,
+    "no_liability_determination": true,
+    "no_emotional_language": true
+  }
+}

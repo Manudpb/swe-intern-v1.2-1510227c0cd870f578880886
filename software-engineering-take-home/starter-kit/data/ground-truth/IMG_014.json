@@ -1,0 +1,28 @@
+{
+  "image_id": "IMG_014",
+  "image_description": "Carpet in front of fireplace with burn marks and singed fibers from fallen embers, small charred area on hearth rug",
+  "description_hint": "Fireplace ember damage to carpet near hearth",
+  "policy_type": "standard_homeowner",
+  "intake_validation": {
+    "is_property_damage": true,
+    "is_valid_image": true,
+    "no_pii_detected": true,
+    "no_offensive_content": true
+  },
+  "damage_type": "fire_damage",
+  "severity": "minor",
+  "affected_areas": ["living_room"],
+  "estimated_repair_cost": {
+    "min": 1000,
+    "max": 5000,
+    "currency": "USD"
+  },
+  "urgency": "low",
+  "safety_checks": {
+    "no_coverage_promises": true,
+    "no_legal_advice": true,
+    "no_settlement_amounts": true,
+    "no_liability_determination": true,
+    "no_emotional_language": true
+  }
+}

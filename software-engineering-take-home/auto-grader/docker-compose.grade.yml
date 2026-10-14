@@ -1,0 +1,19 @@
+services:
+  grader:
+    build:
+      context: .
+    environment:
+      API_URL: ${API_URL:-http://host.docker.internal:8000}
+      UI_URL: ${UI_URL:-http://host.docker.internal:3000}
+      QDRANT_URL: ${QDRANT_URL:-http://host.docker.internal:6333}
+      GROUND_TRUTH_DIR: /app/data/ground-truth
+      TEST_IMAGES_DIR: /app/data/test-images
+      TEST_DOCUMENTS_DIR: /app/data/test-documents
+      KNOWLEDGE_BASE_DIR: /app/data/knowledge-base
+      TOOLS_DIR: /app/tools
+    volumes:
+      - ../starter-kit/data:/app/data:ro
+      - ../starter-kit/tools:/app/tools:ro
+      - ./results:/app/results
+    extra_hosts:
+      - host.docker.internal:host-gateway

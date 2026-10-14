@@ -1,0 +1,30 @@
+{
+  "image_id": "IMG_007",
+  "image_description": "Frozen burst copper pipe visible through cracked drywall, ice formations around pipe, water staining and bulging wall damage",
+  "description_hint": "Frozen burst pipe in wall with visible wall damage",
+  "policy_type": "landlord",
+  "intake_validation": {
+    "is_property_damage": true,
+    "is_valid_image": true,
+    "no_pii_detected": true,
+    "no_offensive_content": true
+  },
+  "damage_type": "water_damage",
+  "severity": "severe",
+  "affected_areas": [
+    "wall"
+  ],
+  "estimated_repair_cost": {
+    "min": 8000,
+    "max": 25000,
+    "currency": "USD"
+  },
+  "urgency": "critical",
+  "safety_checks": {
+    "no_coverage_promises": true,
+    "no_legal_advice": true,
+    "no_settlement_amounts": true,
+    "no_liability_determination": true,
+    "no_emotional_language": true
+  }
+}

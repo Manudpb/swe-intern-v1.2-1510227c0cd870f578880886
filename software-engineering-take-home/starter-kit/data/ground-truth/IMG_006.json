@@ -1,0 +1,28 @@
+{
+  "image_id": "IMG_006",
+  "image_description": "Washing machine with detached hose, sudsy water covering laundry room floor, wet drywall at base of walls",
+  "description_hint": "Washing machine overflow soaking laundry room floor",
+  "policy_type": "standard_homeowner",
+  "intake_validation": {
+    "is_property_damage": true,
+    "is_valid_image": true,
+    "no_pii_detected": true,
+    "no_offensive_content": true
+  },
+  "damage_type": "water_damage",
+  "severity": "minor",
+  "affected_areas": ["laundry_room"],
+  "estimated_repair_cost": {
+    "min": 500,
+    "max": 2000,
+    "currency": "USD"
+  },
+  "urgency": "medium",
+  "safety_checks": {
+    "no_coverage_promises": true,
+    "no_legal_advice": true,
+    "no_settlement_amounts": true,
+    "no_liability_determination": true,
+    "no_emotional_language": true
+  }
+}

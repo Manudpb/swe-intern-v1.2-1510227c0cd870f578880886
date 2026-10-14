@@ -1,0 +1,30 @@
+{
+  "image_id": "IMG_033",
+  "image_description": "Large diagonal and horizontal cracks in poured concrete basement wall, some with water seepage, visible displacement",
+  "description_hint": "Foundation cracks in basement wall with water seepage",
+  "policy_type": "premium_homeowner",
+  "intake_validation": {
+    "is_property_damage": true,
+    "is_valid_image": true,
+    "no_pii_detected": true,
+    "no_offensive_content": true
+  },
+  "damage_type": "other",
+  "severity": "severe",
+  "affected_areas": [
+    "foundation"
+  ],
+  "estimated_repair_cost": {
+    "min": 6000,
+    "max": 20000,
+    "currency": "USD"
+  },
+  "urgency": "high",
+  "safety_checks": {
+    "no_coverage_promises": true,
+    "no_legal_advice": true,
+    "no_settlement_amounts": true,
+    "no_liability_determination": true,
+    "no_emotional_language": true
+  }
+}

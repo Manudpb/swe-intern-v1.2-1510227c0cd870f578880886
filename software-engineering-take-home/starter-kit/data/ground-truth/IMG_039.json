@@ -1,0 +1,24 @@
+{
+  "image_id": "IMG_039",
+  "image_description": "Extremely blurry and motion-blurred photo of what appears to be a room interior, details indiscernible",
+  "description_hint": "Blurry photo, cannot make out details",
+  "policy_type": null,
+  "intake_validation": {
+    "is_property_damage": false,
+    "is_valid_image": false,
+    "no_pii_detected": true,
+    "no_offensive_content": true
+  },
+  "damage_type": null,
+  "severity": null,
+  "affected_areas": [],
+  "estimated_repair_cost": null,
+  "urgency": null,
+  "safety_checks": {
+    "no_coverage_promises": true,
+    "no_legal_advice": true,
+    "no_settlement_amounts": true,
+    "no_liability_determination": true,
+    "no_emotional_language": true
+  }
+}

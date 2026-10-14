@@ -1,0 +1,13 @@
+{
+  "budget_usd": 30,
+  "expires_at": "2026-10-22T23:11:49+00:00",
+  "gateway_base_url": "https://portkey.bain.dev/v1",
+  "mode": "live",
+  "models": {
+    "application": "@openai---take-h-3bb98c/gpt-5.5",
+    "claude": "@anthropic---tak-aa853e/claude-opus-5",
+    "codex": "@openai---take-h-3bb98c/gpt-5.5",
+    "opencode": "@anthropic---tak-aa853e/claude-opus-5"
+  },
+  "schema_version": 1
+}

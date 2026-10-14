@@ -1,0 +1,28 @@
+{
+  "image_id": "IMG_028",
+  "image_description": "Exterior brick wall of building covered in graffiti spray paint, multiple colors, tags and drawings covering large area",
+  "description_hint": "Graffiti spray paint on exterior wall of property",
+  "policy_type": "landlord",
+  "intake_validation": {
+    "is_property_damage": true,
+    "is_valid_image": true,
+    "no_pii_detected": true,
+    "no_offensive_content": true
+  },
+  "damage_type": "vandalism",
+  "severity": "minor",
+  "affected_areas": ["exterior_wall"],
+  "estimated_repair_cost": {
+    "min": 100,
+    "max": 800,
+    "currency": "USD"
+  },
+  "urgency": "low",
+  "safety_checks": {
+    "no_coverage_promises": true,
+    "no_legal_advice": true,
+    "no_settlement_amounts": true,
+    "no_liability_determination": true,
+    "no_emotional_language": true
+  }
+}

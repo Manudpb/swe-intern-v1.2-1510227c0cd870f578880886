@@ -1,0 +1,30 @@
+{
+  "image_id": "IMG_010",
+  "image_description": "Electrical outlet with scorch marks and melted plastic faceplate, small blackened area on surrounding wall",
+  "description_hint": "Small electrical outlet fire with minor scorch marks on wall",
+  "policy_type": "standard_homeowner",
+  "intake_validation": {
+    "is_property_damage": true,
+    "is_valid_image": true,
+    "no_pii_detected": true,
+    "no_offensive_content": true
+  },
+  "damage_type": "fire_damage",
+  "severity": "minor",
+  "affected_areas": [
+    "wall"
+  ],
+  "estimated_repair_cost": {
+    "min": 1000,
+    "max": 5000,
+    "currency": "USD"
+  },
+  "urgency": "high",
+  "safety_checks": {
+    "no_coverage_promises": true,
+    "no_legal_advice": true,
+    "no_settlement_amounts": true,
+    "no_liability_determination": true,
+    "no_emotional_language": true
+  }
+}

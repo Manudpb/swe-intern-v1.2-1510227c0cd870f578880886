@@ -1,0 +1,30 @@
+{
+  "image_id": "IMG_024",
+  "image_description": "Sliding glass patio door completely shattered, glass fragments on floor, bent door track, damaged lock mechanism",
+  "description_hint": "Smashed sliding glass door from forced entry",
+  "policy_type": "premium_homeowner",
+  "intake_validation": {
+    "is_property_damage": true,
+    "is_valid_image": true,
+    "no_pii_detected": true,
+    "no_offensive_content": true
+  },
+  "damage_type": "break_in",
+  "severity": "moderate",
+  "affected_areas": [
+    "patio_door"
+  ],
+  "estimated_repair_cost": {
+    "min": 1000,
+    "max": 4000,
+    "currency": "USD"
+  },
+  "urgency": "high",
+  "safety_checks": {
+    "no_coverage_promises": true,
+    "no_legal_advice": true,
+    "no_settlement_amounts": true,
+    "no_liability_determination": true,
+    "no_emotional_language": true
+  }
+}

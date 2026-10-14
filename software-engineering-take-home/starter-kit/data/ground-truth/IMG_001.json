@@ -1,0 +1,28 @@
+{
+  "image_id": "IMG_001",
+  "image_description": "Burst pipe under kitchen sink with water pooling on the kitchen floor, visible pipe damage and water spreading across tile",
+  "description_hint": "Burst pipe under kitchen sink, water pooling on floor",
+  "policy_type": "standard_homeowner",
+  "intake_validation": {
+    "is_property_damage": true,
+    "is_valid_image": true,
+    "no_pii_detected": true,
+    "no_offensive_content": true
+  },
+  "damage_type": "water_damage",
+  "severity": "moderate",
+  "affected_areas": ["kitchen"],
+  "estimated_repair_cost": {
+    "min": 2000,
+    "max": 8000,
+    "currency": "USD"
+  },
+  "urgency": "high",
+  "safety_checks": {
+    "no_coverage_promises": true,
+    "no_legal_advice": true,
+    "no_settlement_amounts": true,
+    "no_liability_determination": true,
+    "no_emotional_language": true
+  }
+}

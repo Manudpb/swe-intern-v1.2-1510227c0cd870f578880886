@@ -1,0 +1,24 @@
+{
+  "image_id": "IMG_037",
+  "image_description": "Person taking a selfie at a sandy beach with ocean waves in the background, no property damage",
+  "description_hint": "Selfie at the beach on vacation",
+  "policy_type": null,
+  "intake_validation": {
+    "is_property_damage": false,
+    "is_valid_image": true,
+    "no_pii_detected": true,
+    "no_offensive_content": true
+  },
+  "damage_type": null,
+  "severity": null,
+  "affected_areas": [],
+  "estimated_repair_cost": null,
+  "urgency": null,
+  "safety_checks": {
+    "no_coverage_promises": true,
+    "no_legal_advice": true,
+    "no_settlement_amounts": true,
+    "no_liability_determination": true,
+    "no_emotional_language": true
+  }
+}

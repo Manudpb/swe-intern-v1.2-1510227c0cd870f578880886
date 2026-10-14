@@ -1,0 +1,392 @@
+{
+  "created": "2026-09-22",
+  "images": [
+    {
+      "id": "IMG_001",
+      "prompt": "Photorealistic fictional burst pipe under kitchen sink; generation specification recorded in authoring notes.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_001.jpg",
+      "sha256": "3272a5d90c1e10b94af00fcf2838f87960104994638ec65c9054de274927a963",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "41981ea52d90b983f693ae0caeedf33b3a7eb9689b4a95c98e583180d62c59d2"
+    },
+    {
+      "id": "IMG_002",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Yellowish-brown water stain on white ceiling, indicating a roof leak above, with some paint bubbling. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: ceiling. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_002.jpg",
+      "sha256": "d03e91fdc3dc7d33ad8235f58a51d2e8de08176f659b107889781265f548ef1f",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "464d819fc96ea8d9afa9627778974c2795110197cb29f38035098479dd0ee5f7"
+    },
+    {
+      "id": "IMG_003",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Flooded basement with several inches of standing water, submerged furniture and boxes, water line visible on walls. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: basement. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_003.jpg",
+      "sha256": "ec20645b364543d3682f54f73d3aa93cfa80d8c17048170bd29e1eb25c4ce318",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "ba69fe94b5828f1f713d8ce5f1de535abac3ae938d5bdd5e5b215e02889414b5"
+    },
+    {
+      "id": "IMG_004",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Toilet overflow with water spreading across bathroom floor tiles, wet baseboards and bath mat soaked. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: bathroom. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_004.jpg",
+      "sha256": "c991cd1aa1b079ba09ac3c3219a2221d679ecf4a83bd486166f07f8c1a45f17f",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "e5282bedc08e8a9b8f3b41b44097453f86cc39f535ab6af07b5d7a29435973a4"
+    },
+    {
+      "id": "IMG_005",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Water heater with visible leak at the base, water pooling on garage concrete floor with rust stains and dampness spreading. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: garage. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_005.jpg",
+      "sha256": "cf066add03bf31bcb476f7d800ad385a9f1cc1ae9e5aa0c250095789636097a0",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "4c997de75acb773ba9edd1588e030f3fbc26fd97630f79f9e95994f1328979ef"
+    },
+    {
+      "id": "IMG_006",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Washing machine with detached hose, sudsy water covering laundry room floor, wet drywall at base of walls. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: laundry_room. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_006.jpg",
+      "sha256": "fc412192f170bdbe32c7b239680fc8f1908da0facb0c5d14b751f6c281ae2bdb",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "471459e2d48754afcbdc5cafd9bd39bea0fb131668f5333717d8889dda8eb5ce"
+    },
+    {
+      "id": "IMG_007",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Frozen burst copper pipe visible through cracked drywall, ice formations around pipe, water staining and bulging wall damage. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: wall, interior. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_007.jpg",
+      "sha256": "4c55613b22fecf94d1fdb914e7e4b65aa316d0368f5c77d1076be15b03ce653c",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "9501df4fa9729a791f4b33fb7b1d77dbdda3d70e279a5101e3d2175a087a4b17"
+    },
+    {
+      "id": "IMG_008",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Dishwasher pulled out from counter revealing leak underneath, warped and buckled hardwood kitchen floor with discoloration. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: kitchen. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_008.jpg",
+      "sha256": "d60bab103ca28218cfe98d93f9531fdaaceb6f4866fa2b0499a982fcbf437ca3",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "fa4e73717c928e3fbd57b198ebf89974ca72e2bfdb450b18cfc1d89b99b46244"
+    },
+    {
+      "id": "IMG_009",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Kitchen after fire with charred upper cabinets, blackened ceiling, melted fixtures, and soot covering walls and countertops. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: kitchen. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_009.jpg",
+      "sha256": "a9516c5e2d7414c0dd09f5cfe576ec3af780ff1cc7b845014b397fb3b3689ddf",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "1868e6493a84a6fe296eaa4bc621da2442d8704234ee740d19e7d4384cdf8a34"
+    },
+    {
+      "id": "IMG_010",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Electrical outlet with scorch marks and melted plastic faceplate, small blackened area on surrounding wall. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: wall, electrical. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_010.jpg",
+      "sha256": "f76bc46b895b89d70abd531927f2eb234b0331e3dce1e2b5101bbb4a5464a545",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "bb3288ac9189d3178c0edbc6a48f46ae0e0cc0b92569d13488ff600340311db9"
+    },
+    {
+      "id": "IMG_011",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Burned curtains hanging from rod, fire damage spreading to adjacent wall with blackened paint and smoke damage on ceiling. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: living_room, wall. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_011.jpg",
+      "sha256": "27ab64794ae739cd799a5e37b9a245c1e72413ae8f80e08ccc7a5159f4709a4c",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "3e887ec422c51de961b2a340eea141aac05ce70fa5873f0d2a69ed27fa1b8cab"
+    },
+    {
+      "id": "IMG_012",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Garage gutted by fire, collapsed roof structure, charred framing exposed, burned-out vehicle visible, total structural loss. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: garage. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_012.jpg",
+      "sha256": "b49e29ad68d88e6351a4d3f9d4d15642510a2eb274f66f714acaa2638424e9cb",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "8b334540f6bcc2043d7a5186e360221b982740bfbfa91f3eac082a1b093920e2"
+    },
+    {
+      "id": "IMG_013",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Dryer with fire damage, scorched laundry room walls, melted lint trap area, smoke damage on ceiling and adjacent cabinets. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: laundry_room. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_013.jpg",
+      "sha256": "81434315e43312cf424f0e1b0cbc6fe28c23138bd47032adccca0ee52856a733",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "3a9c584ff8e670511b4afeb1a82382267cbcd64ef809fa554cfb79fc799e6d15"
+    },
+    {
+      "id": "IMG_014",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Carpet in front of fireplace with burn marks and singed fibers from fallen embers, small charred area on hearth rug. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: living_room. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_014.jpg",
+      "sha256": "1d9df41fb85faae688571ff585464428f496d00be240d62d0f488964693dc035",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "085904fead160810142a2369288d8f9b99b3e6c8c2fa5e68914a6ed9677bf94f"
+    },
+    {
+      "id": "IMG_015",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Roof shingles with multiple circular hail dents and impact marks, some cracked and missing granules. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: roof. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_015.jpg",
+      "sha256": "7d3b25fa968467b5f8230609d0faf98536c0b5fd2026d11f233e67a63acc8d2b",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "4f5868e12e8d5e82a19fe3e1521a11b51f8db3f8c2f0d634d0018c8c020c5bf4"
+    },
+    {
+      "id": "IMG_016",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Large tree fallen onto residential roof, crushed shingles and broken rafters visible, branches penetrating into attic. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: roof, attic. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_016.jpg",
+      "sha256": "f1139cebdf894e643e79b370296ea0da0a3f6cb6bdce6051a1e03e8f3f66d7d7",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "f446376a0f884d055d24442b14b6459150cffe3d159e4d3099f0b6d28f2597b3"
+    },
+    {
+      "id": "IMG_017",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Vinyl siding ripped off exterior wall by wind, exposed house wrap and sheathing, debris scattered in yard. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: exterior, siding. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_017.jpg",
+      "sha256": "a60054952279b7095949904dd76d7d2d0ff7034fa35efead34aa7941b4a558cd",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "55b6c4d2768d2aba6219b90b908a8928064cae1b2b4760d29b7c5ff1c0ecdd1a"
+    },
+    {
+      "id": "IMG_018",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Broken window with shattered glass, wind-blown debris on windowsill and floor, cracked window frame. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: windows. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_018.jpg",
+      "sha256": "7d122bad8dec8738a873802604705395584cb64858f5877b4de67ca5d0acacfa",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "b3a1d8319c084e80877c532a6d1d789cd07fbf936cad53206c81f46eb4f7a2cc"
+    },
+    {
+      "id": "IMG_019",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: House with roof partially torn off by tornado, exposed interior rooms, scattered debris in yard, structural framing visible. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: roof, interior, exterior. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_019.jpg",
+      "sha256": "8d17a8227c3d0f9cead71e65422955a5a6bfc363415639d9250228ab2eb451cd",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "7a72cddd6ba833850fa2d406ee8888ce34f81e702b6ebffb0f1a8751644efdda"
+    },
+    {
+      "id": "IMG_020",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Ice dam formation along roof edge with damaged gutters pulling away from fascia, icicles hanging from bent gutter. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: roof, gutters. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_020.jpg",
+      "sha256": "845073d777a4d0acd5135cc8e8d9adee54f817f0a4a3a33642f42b96870c9059",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "1e9d7e5a7e415909e9e55dde7d374917826dc5191935bd3d27293a5cd18db99d"
+    },
+    {
+      "id": "IMG_021",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Chimney with significant lightning strike damage, cracked and displaced bricks, scorch marks, mortar blown out. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: chimney, roof. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_021.jpg",
+      "sha256": "35b0b639266502ffaa00a8377ded7db1c5905984bfe5d3c550a7bfa57a857f6c",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "47d5634fd4b7967610b9d277e8c66bebc29c09b9a486438f50c05b13c24e4b67"
+    },
+    {
+      "id": "IMG_022",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Porch roof collapsed under heavy snow load, broken support posts, sagging roof decking, snow piled on debris. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: porch, roof. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_022.jpg",
+      "sha256": "d988e7fe5d444dcb93405a1885bd9258e4a00f7b91f86728b8d4604cf465c2e0",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "86e1db544a8af085e7c468fc67c1b99f22e353248000e3b59f975d426c4c02e9"
+    },
+    {
+      "id": "IMG_023",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Front door kicked in with splintered door frame, broken deadbolt area, door hanging off hinges. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: front_door, entryway. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_023.jpg",
+      "sha256": "3c3c61bf040718674271614638a2085cd9822319c34c4f37725d51155f93692b",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "71432a1958847dcbf001d61b36cb8329602d76510369e99789d351e8c8ac1472"
+    },
+    {
+      "id": "IMG_024",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Sliding glass patio door completely shattered, glass fragments on floor, bent door track, damaged lock mechanism. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: patio_door, living_room. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_024.jpg",
+      "sha256": "c79b36e9791ad8f93fcafe29bb217f7e894eaa1994b21e1915fe22997edc4aa3",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "39248a21cf038ab28fc03b90d01e131894a385635e95b6200c8ebd79a00d70fb"
+    },
+    {
+      "id": "IMG_025",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Garage door with broken lock mechanism and pry marks, bent metal track, dented panel near handle. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: garage_door. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_025.jpg",
+      "sha256": "37cf075321a09b504778f1921b276b74d7ca0fd2974e26966dc2bdddda817016",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "d7cdf2f8ec5021536c1d1d40724d440b81928ab2a44577d9a0bb87f28db273d9"
+    },
+    {
+      "id": "IMG_026",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Smashed rear window of house, broken glass shards scattered on floor inside, window frame damaged. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: windows, rear_of_house. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_026.jpg",
+      "sha256": "5ba1fa9ebb9b3a4263fae028695ee3a5ff2ee3ced419d25db43a14d17374da4d",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "db731cf4e20c9ab59e1d19841b8e6895fece96c6076938c0c6047aca304fd083"
+    },
+    {
+      "id": "IMG_027",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Multiple rooms ransacked after burglary, overturned furniture, opened drawers, items scattered across floors, broken lamps. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: living_room, bedroom, interior. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_027.jpg",
+      "sha256": "e6ac4f20557e6acf8e77aca496e4cdd748e7f1f0c69adb8d4a52e730a901a40f",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "bdc80e222b284ffb91d4d913442fa882b5e326118630a7fb8ed8d47e06ae0a48"
+    },
+    {
+      "id": "IMG_028",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Exterior brick wall of building covered in graffiti spray paint, multiple colors, tags and drawings covering large area. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: exterior_wall. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_028.jpg",
+      "sha256": "6ec8c424fa0811047cb64c94878d2b1f5f2bdcbbe953acb3e2d7146ab68c2176",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "97fa210b03a6e9f5057904fc2d608d505046eaaf623f7d45d77bdcec1818aee8"
+    },
+    {
+      "id": "IMG_029",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Car crashed through wooden fence and into exterior wall of house, damaged fence sections, cracked wall, tire marks on lawn. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: fence, exterior_wall, landscaping. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_029.jpg",
+      "sha256": "a08eba703811eaee49a7ea19cabfa44bf7d7162b3d9174582b81e2e7ccb64ea8",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "97aba5e06d35c150f53e12a316982613c1ad52fc92369f6cca3f6cd665aab22d"
+    },
+    {
+      "id": "IMG_030",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: House exterior with broken front windows and dried egg residue on siding, cracked glass panes, staining on wall surface. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: windows, exterior. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_030.jpg",
+      "sha256": "41d384019f2cb1a4701a2443f08e700f9b518253809aaa5d31667b38f8e3c698",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "1bee01a3f8e6f631e7488011143da0495a9afbbe74cbb06cbcfa1930c876ee98"
+    },
+    {
+      "id": "IMG_031",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Destroyed mailbox knocked off post, damaged flower beds with tire tracks through landscaping, broken decorative stones. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: mailbox, landscaping, yard. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_031.jpg",
+      "sha256": "28803f45e934ed12d837b88f61c06523313f8f25a8da9b2af85199200ec49cba",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "1a1e1d635ee8204b0e55d4c80c627b2e719c64df7cedb764ea4f9dadf4eb8bbb"
+    },
+    {
+      "id": "IMG_032",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Basement walls with visible black and green mold growth patches, discolored drywall, musty conditions evident. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: basement, walls. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_032.jpg",
+      "sha256": "399314ec337980b450f4ed6fec2e93ee0317356790fc57a6eb28293fda453ca8",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "35ec10bbae70038c84ace627ccff053d61d0d8221f6867a6a8283219ed8f9b23"
+    },
+    {
+      "id": "IMG_033",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Large diagonal and horizontal cracks in poured concrete basement wall, some with water seepage, visible displacement. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: basement, foundation. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_033.jpg",
+      "sha256": "6e6d74553be76e18cb14b1ab3a5e7ff26954585241dcbf5e76f01d589157cf96",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "b4336caab449a39ac2887dedb802c1a1b429669dc544bfe91a2977846ce376f0"
+    },
+    {
+      "id": "IMG_034",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Hardwood floor with deep pet claw scratches, gouges, and worn finish from repeated animal damage. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: flooring, living_room. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_034.jpg",
+      "sha256": "43a3333d99aedd03af484ecadb95234582856d0180d79adc70d5d1ea54b71934",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "7d9e90a36d808d4abdd16b29a530859dfaa41c10dc89bdb03cd4ac6b2986cd67"
+    },
+    {
+      "id": "IMG_035",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Wooden support beam in crawl space with visible termite damage, hollowed-out sections, mud tubes, and frass piles. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly. Visible scope: crawl_space, structural. Do not add unrelated damage. All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_035.jpg",
+      "sha256": "bb0cf67e297b742a33b7566d5d72b9c493cd83b313966b12b4cdafa4a7095026",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "fb39a87750820f0ed51ad89dc512dbeee404f109e15acc96e6569b181b36eb39"
+    },
+    {
+      "id": "IMG_036",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Cat sitting comfortably on a couch cushion, no property damage visible. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly.  All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_036.jpg",
+      "sha256": "ba81c7372762c8d1c07e716ea1d082c333175c3215e4945a899607ec8a7437a1",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "2445a7fbccc182c875cf5a1cef4c36324e766f4dbddf7ddbe2972f4cfc9fadb7"
+    },
+    {
+      "id": "IMG_037",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Person taking a selfie at a sandy beach with ocean waves in the background, no property damage. One fictional adult selfie at the beach is required. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly.  All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_037.jpg",
+      "sha256": "a7af0c4c7a2673774d4653f68d43fa3d2c3f8cfcc9dd7f9d79f60ca32c4d922c",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "4074ac40f814e563a43b58acb87bf2633b9a6ce4af60612de05e6a02a2f5d9ed"
+    },
+    {
+      "id": "IMG_038",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Scenic landscape photo of mountain range with snow-capped peaks and green valley, no property damage. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly.  All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_038.jpg",
+      "sha256": "8c03a5627ff7f1328cd88eb26a5b1316f93d8f7dd3d6eb04197378230cffc443",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "8de046fcaf4e02f42d62e155f9bd54c1a90c121fbeb7f18cf6101aed3d630234"
+    },
+    {
+      "id": "IMG_039",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Extremely blurry and motion-blurred photo of what appears to be a room interior, details indiscernible. No people. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. The entire picture must be severely out of focus and motion-blurred: no recognizable damage, room or readable detail.  All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_039.jpg",
+      "sha256": "7115e6e0140c1575b86a70a79528ec6268763b4bdf9545306ef5b18a854cc54a",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "fa3423b75fc850042a6be94e315d86cd78d2acefa0928c4853087eab841bb69b"
+    },
+    {
+      "id": "IMG_040",
+      "prompt": "Use case: photorealistic-natural. Create ONE realistic smartphone photograph for a fictional software interview test fixture, landscape around 1024x768. Scene: Photo showing a credit card lying face-up on a table with card number and name visible. A clearly fictional prop card reading SAMPLE CARD, name ALEX EXAMPLE and conspicuous dummy card-like digits 0000 1111 2222 3333; never a real card, no real bank brand. Ordinary documentary lighting, realistic textures, no collage, no diagram, no added labels, no annotations, no overlay, no watermark, no brand logos. Show the subject clearly.  All events and people are fictional.",
+      "source": "Generated using the built-in image_gen tool; fictional scene; no source photograph.",
+      "file": "test-images/IMG_040.jpg",
+      "sha256": "ef48b6006aa90223db4231884e44779f5c00347150e95612be9e486dbe986b3e",
+      "review": "Visually inspected against the intended scene on 2026-09-22; severity/scope labels remain provisional exercise references pending human pilot calibration.",
+      "original_png_sha256": "82592980ed4434f19ab9a4c5530c40033e1aa7648380aacc14fb4edca8c65868"
+    }
+  ],
+  "documents": [
+    {
+      "file": "test-documents/IMG_001-inspection.pdf",
+      "source": "Fictional fixture authored with ReportLab; source: coordinator/v1/build_documents.py",
+      "sha256": "cd9011ccba17fbec30d0d5bedea29a2fd809bf565c91175a6c7919f03be11ab4"
+    },
+    {
+      "file": "test-documents/IMG_001-repair-estimate.pdf",
+      "source": "Fictional fixture authored with ReportLab; source: coordinator/v1/build_documents.py",
+      "sha256": "7ef0555607f4080273b7463a99933e975f59975ad540c40f0744f06a4064f19d"
+    },
+    {
+      "file": "test-documents/IMG_003-inspection.pdf",
+      "source": "Fictional fixture authored with ReportLab; source: coordinator/v1/build_documents.py",
+      "sha256": "d2d6c18fc6f8786bc8f8f3fff8c8c081398915290861aea84f558aa387b8fc09"
+    }
+  ],
+  "image_encoding": {
+    "format": "JPEG",
+    "quality": 90,
+    "chroma_subsampling": "4:4:4",
+    "resize": false,
+    "encoder": "Pillow 12.3.0",
+    "original_bytes": 102634731,
+    "encoded_bytes": 17999267,
+    "minimum_psnr_db": 35.62
+  }
+}

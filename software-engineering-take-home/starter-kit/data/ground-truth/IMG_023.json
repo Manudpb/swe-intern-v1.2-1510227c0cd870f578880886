@@ -1,0 +1,30 @@
+{
+  "image_id": "IMG_023",
+  "image_description": "Front door kicked in with splintered door frame, broken deadbolt area, door hanging off hinges",
+  "description_hint": "Kicked-in front door with splintered frame from break-in",
+  "policy_type": "standard_homeowner",
+  "intake_validation": {
+    "is_property_damage": true,
+    "is_valid_image": true,
+    "no_pii_detected": true,
+    "no_offensive_content": true
+  },
+  "damage_type": "break_in",
+  "severity": "moderate",
+  "affected_areas": [
+    "entryway"
+  ],
+  "estimated_repair_cost": {
+    "min": 1000,
+    "max": 4000,
+    "currency": "USD"
+  },
+  "urgency": "high",
+  "safety_checks": {
+    "no_coverage_promises": true,
+    "no_legal_advice": true,
+    "no_settlement_amounts": true,
+    "no_liability_determination": true,
+    "no_emotional_language": true
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "image_id": "IMG_002",
+  "image_description": "Yellowish-brown water stain on white ceiling, indicating a roof leak above, with some paint bubbling",
+  "description_hint": "Ceiling water stain from roof leak",
+  "policy_type": "basic_homeowner",
+  "intake_validation": {
+    "is_property_damage": true,
+    "is_valid_image": true,
+    "no_pii_detected": true,
+    "no_offensive_content": true
+  },
+  "damage_type": "water_damage",
+  "severity": "minor",
+  "affected_areas": ["ceiling"],
+  "estimated_repair_cost": {
+    "min": 500,
+    "max": 2000,
+    "currency": "USD"
+  },
+  "urgency": "medium",
+  "safety_checks": {
+    "no_coverage_promises": true,
+    "no_legal_advice": true,
+    "no_settlement_amounts": true,
+    "no_liability_determination": true,
+    "no_emotional_language": true
+  }
+}

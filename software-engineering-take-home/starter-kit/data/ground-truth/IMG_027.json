@@ -1,0 +1,31 @@
+{
+  "image_id": "IMG_027",
+  "image_description": "Multiple rooms ransacked after burglary, overturned furniture, opened drawers, items scattered across floors, broken lamps",
+  "description_hint": "Multiple rooms ransacked with overturned furniture after break-in",
+  "policy_type": "standard_homeowner",
+  "intake_validation": {
+    "is_property_damage": true,
+    "is_valid_image": true,
+    "no_pii_detected": true,
+    "no_offensive_content": true
+  },
+  "damage_type": "break_in",
+  "severity": "severe",
+  "affected_areas": [
+    "living_room",
+    "bedroom"
+  ],
+  "estimated_repair_cost": {
+    "min": 8000,
+    "max": 24000,
+    "currency": "USD"
+  },
+  "urgency": "high",
+  "safety_checks": {
+    "no_coverage_promises": true,
+    "no_legal_advice": true,
+    "no_settlement_amounts": true,
+    "no_liability_determination": true,
+    "no_emotional_language": true
+  }
+}
