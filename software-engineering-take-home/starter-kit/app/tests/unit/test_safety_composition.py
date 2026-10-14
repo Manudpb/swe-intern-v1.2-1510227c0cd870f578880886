@@ -85,14 +85,31 @@ def test_a_missing_verdict_is_not_a_pass(make_deps):
 
 
 def test_the_review_call_is_low_effort(make_deps):
-    """Research D9 pins the shape: temperature 0, small token ceiling, no images."""
+    """Research D9 pins the shape: small token ceiling, no images, no thinking.
+
+    `temperature` is deliberately absent — the approved model rejects it with HTTP 400.
+    """
     llm = _review_llm()
     deps = make_deps(llm=llm)
 
     llm_review(deps, NEUTRAL, SAFE)
 
     call = llm.calls_for("safety")[0]
-    assert call["temperature"] == 0.0
+    assert call["extra"] == {}, "no extra request fields; temperature would be a 400"
     assert call["max_tokens"] <= 300
     blocks = call["messages"][0]["content"]
     assert all(block.get("type") == "text" for block in blocks)
+
+
+def test_the_verdict_tool_is_forced_not_merely_offered(make_deps):
+    """Without tool_choice the model may answer in prose, which is a 503.
+
+    Found on the first live triage: the review returned text and the gate could not run.
+    """
+    llm = _review_llm()
+    deps = make_deps(llm=llm)
+
+    llm_review(deps, NEUTRAL, SAFE)
+
+    call = llm.calls_for("safety")[0]
+    assert call["tool_choice"] == {"type": "tool", "name": "report_safety_verdict"}
