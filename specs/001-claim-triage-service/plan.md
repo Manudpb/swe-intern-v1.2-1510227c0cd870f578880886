@@ -53,8 +53,9 @@ from one image.
 
 **Performance Goals**: p50 triage under 30 s; hard per-request budget of 110 s so a submission always
 answers inside the evaluator's 120 s timeout. Target 5–6 model calls per triage (1 intake + 3–4 loop
-rounds + 1 safety review), rising to 8 when the first draft breaks a safety rule and the rewrite
-path runs. Images are downscaled before upload to hold input tokens down, and the safety calls are
+rounds + 1 safety review). The configured caps allow a worst case of **10** — 1 intake + 6
+`max_tool_rounds` + 3 safety-route calls on the rewrite path — which is the bound, not the
+expectation. Images are downscaled before upload to hold input tokens down, and the safety calls are
 text-only on low effort.
 
 **Constraints**: One external runtime dependency (the funded model credential). No paid call in any
@@ -109,7 +110,8 @@ specs/001-claim-triage-service/
 software-engineering-take-home/starter-kit/
 ├── docker-compose.yml                  # EDIT: add api + ui services beside qdrant
 ├── Makefile                            # EDIT: real `test` target; keep paid targets untouched
-├── api-contract/openapi.yaml            # READ-ONLY — the authority (Principle I)
+├── api-contract/openapi.yaml            # READ-ONLY authority (Principle I); mounted ro into api
+                                         #   at /app/api-contract so the in-image tests can load it
 ├── data/knowledge-base/                 # mounted read-only into api
 ├── tools/                               # cost + coverage tables, mounted read-only
 └── app/                                 # NEW — one image, two entrypoints
@@ -175,6 +177,12 @@ service runs `claim_triage.ui.app:app` on 3000 — which keeps a single dependen
 build, and a UI that can call the API over the Compose network without CORS. A separate frontend
 project was rejected: the UI is one page with one form, and a second toolchain would cost more than
 it returns at this scope.
+
+Because the suite runs **inside** the api image, two host-side artifacts have to be reachable there:
+`api-contract/` is mounted read-only at `/app/api-contract` so the conformance tests can load the
+contract, and the credential file is declared `required: false` so `make test` works without it.
+Both were gaps found by `/speckit-analyze` (findings C1, C2). Repo-level assertions that need the
+compose file itself — the ground-truth mount grep — run on the host in T112, not in pytest.
 
 ## Complexity Tracking
 

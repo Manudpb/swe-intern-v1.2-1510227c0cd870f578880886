@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claim Triage</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<header>
+  <h1>Home-damage claim triage</h1>
+  <p class="sub">Internal adjuster tool. Fictional claims only.</p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>Submit a claim</h2>
+    <form id="claim-form" action="/submit" method="post" enctype="multipart/form-data"
+          data-api-base="/api/v1">
+      <label for="images">Damage photographs <span class="hint">(one incident, several views allowed)</span></label>
+      <input id="images" name="images" type="file" accept="image/jpeg,image/png" multiple>
+
+      <label for="description">Incident description</label>
+      <textarea id="description" name="description" rows="4"
+                placeholder="e.g. Burst pipe under the kitchen sink, water pooling on the floor"></textarea>
+
+      <label for="document">Supporting document <span class="hint">(optional PDF inspection or estimate)</span></label>
+      <input id="document" name="document" type="file" accept="application/pdf">
+
+      <label for="policy_type">Policy type</label>
+      <select id="policy_type" name="policy_type">
+        {% for policy in policy_types %}
+        <option value="{{ policy }}" {% if policy == 'standard_homeowner' %}selected{% endif %}>
+          {{ policy.replace('_', ' ') }}
+        </option>
+        {% endfor %}
+      </select>
+
+      <button id="submit-button" type="submit">Run triage</button>
+      <p class="hint" id="pending" hidden>Assessing — this takes 10–30 seconds.</p>
+    </form>
+  </section>
+
+  {% if error %}
+  <section class="card error" id="error-panel">
+    <h2>{{ error.title }}</h2>
+    <p>{{ error.message }}</p>
+    {% if error.intake_validation %}
+    <h3>Intake checks</h3>
+    <ul class="checks">
+      {% for name, value in error.intake_validation.items() %}
+      <li class="{% if value is false %}fail{% elif value is none %}na{% else %}pass{% endif %}">
+        {{ name.replace('_', ' ') }}:
+        {% if value is none %}not applicable{% elif value %}passed{% else %}FAILED{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% if error.safety_checks %}
+    <h3>Safety limits</h3>
+    <ul class="checks">
+      {% for name, value in error.safety_checks.items() %}
+      <li class="{% if value %}pass{% else %}fail{% endif %}">
+        {{ name.replace('_', ' ') }}: {% if value %}ok{% else %}FAILED{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  {% if result %}
+  {% set a = result.triage_assessment %}
+  <section class="card" id="report">
+    <h2>Triage report</h2>
+    <p class="hint">Claim <code id="claim-id">{{ result.claim_id }}</code></p>
+
+    <dl class="grid">
+      <div><dt>Damage type</dt><dd id="damage-type">{{ a.damage_type.replace('_', ' ') }}</dd></div>
+      <div><dt>Severity</dt><dd id="severity">{{ a.severity }}</dd></div>
+      <div><dt>Urgency</dt><dd id="urgency">{{ a.urgency }}</dd></div>
+      <div><dt>Repair cost range</dt>
+        <dd id="cost">{{ '{:,.0f}'.format(a.estimated_repair_cost.min) }} –
+          {{ '{:,.0f}'.format(a.estimated_repair_cost.max) }}
+          {{ a.estimated_repair_cost.currency }}</dd></div>
+      <div><dt>Affected areas</dt>
+        <dd id="affected-areas">{{ a.affected_areas | map('replace', '_', ' ') | join(', ') }}</dd></div>
+    </dl>
+
+    <h3>Observed damage</h3>
+    <p id="damage-description">{{ a.damage_description }}</p>
+
+    <h3>Recommendation</h3>
+    <p id="recommendation">{{ a.recommendation }}</p>
+
+    <h3>Similar past claims</h3>
+    {% if a.similar_past_claims %}
+    <table id="similar-claims">
+      <thead><tr><th>Claim</th><th>Similarity</th><th>Resolution</th></tr></thead>
+      <tbody>
+      {% for claim in a.similar_past_claims %}
+        <tr>
+          <td><code>{{ claim.claim_id }}</code></td>
+          <td>{{ '%.2f' | format(claim.similarity_score) }}</td>
+          <td>{{ claim.resolution_summary }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <p class="hint">No comparable historical claim was retrieved.</p>
+    {% endif %}
+
+    <h3>Checks</h3>
+    <ul class="checks inline">
+      {% for name, value in result.intake_validation.items() %}
+      <li class="{% if value is false %}fail{% elif value is none %}na{% else %}pass{% endif %}">
+        {{ name.replace('_', ' ') }}</li>
+      {% endfor %}
+      {% for name, value in result.safety_checks.items() %}
+      <li class="{% if value %}pass{% else %}fail{% endif %}">{{ name.replace('_', ' ') }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="card" id="trace-panel" data-claim-id="{{ result.claim_id }}">
+    <h2>How this report was produced</h2>
+    <p class="hint">Reason → act → observe, as recorded during the run.</p>
+    <ol id="trace-steps"><li class="hint">Loading the execution trace…</li></ol>
+  </section>
+  {% endif %}
+</main>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

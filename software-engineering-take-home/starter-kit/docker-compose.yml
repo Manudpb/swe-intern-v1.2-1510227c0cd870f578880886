@@ -1,6 +1,5 @@
 services:
   # Vector database for storing embedded historical claims
-  # You may swap this for another vector DB (Chroma, Pinecone, Weaviate, etc.)
   qdrant:
     image: qdrant/qdrant:v1.12.6
     ports:
@@ -8,45 +7,48 @@ services:
       - "6334:6334"   # gRPC
     volumes:
       - qdrant_data:/qdrant/storage
-    # Do not assume the upstream image includes curl. Your API should retry the
-    # database readiness endpoint at startup and expose its own health check.
+    # The API retries the readiness endpoint at startup and exposes its own health check,
+    # because this image is not assumed to carry curl.
 
-  # ==========================================================================
-  # YOUR SERVICES BELOW
-  # ==========================================================================
-  # Add your backend API service, UI service, and any other services you need.
-  #
-  # Requirements:
-  #   - Your API must be accessible on port 8000
-  #   - Your UI must be accessible on port 3000
-  #   - Your API must expose a GET /api/v1/health endpoint
-  #   - The only external dependency should be your LLM API key
-  #     (pass PORTKEY_API_KEY, PORTKEY_BASE_URL and LLM_MODEL to the backend)
-  #
-  # Example:
-  #
-  # api:
-  #   build: ./api
-  #   ports:
-  #     - "8000:8000"
-  #   environment:
-  #     - PORTKEY_API_KEY=${PORTKEY_API_KEY}
-  #     - PORTKEY_BASE_URL=${PORTKEY_BASE_URL}
-  #     - LLM_MODEL=${LLM_MODEL}
-  #     - QDRANT_URL=http://qdrant:6333
-  #   depends_on:
-  #     qdrant:
-  #       condition: service_started
-  #   volumes:
-  #     - ./data:/app/data
-  #
-  # ui:
-  #   build: ./ui
-  #   ports:
-  #     - "3000:3000"
-  #   depends_on:
-  #     - api
-  # ==========================================================================
+  # Triage API. Port 8000, /api/v1/health, Claude through the funded Portkey gateway.
+  api:
+    build: ./app
+    ports:
+      - "8000:8000"
+    # Optional on purpose: `make test` must run with no credential present, and the
+    # submission ZIP excludes .env (constitution Principle VI, finding C2).
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      - QDRANT_URL=http://qdrant:6333
+      - KNOWLEDGE_BASE_DIR=/app/data/knowledge-base
+      - TOOLS_DIR=/app/tools
+      - OPENAPI_PATH=/app/api-contract/openapi.yaml
+    volumes:
+      # Narrow, read-only mounts. ./data is NEVER mounted wholesale: it contains
+      # ground-truth/, which no runtime path may reach (constitution Principle V).
+      - ./data/knowledge-base:/app/data/knowledge-base:ro
+      - ./tools:/app/tools:ro
+      # The contract is the authority and the test suite runs inside this image,
+      # so it is mounted read-only rather than copied (finding C1).
+      - ./api-contract:/app/api-contract:ro
+    depends_on:
+      qdrant:
+        condition: service_started
+
+  # Server-rendered adjuster page. Port 3000, proxies to the API over the Compose
+  # network so the browser only ever talks to its own origin (no CORS).
+  ui:
+    build: ./app
+    command: ["uvicorn", "claim_triage.ui.app:app", "--host", "0.0.0.0", "--port", "3000"]
+    ports:
+      - "3000:3000"
+    environment:
+      - API_BASE_URL=http://api:8000
+    depends_on:
+      api:
+        condition: service_started
 
 volumes:
   qdrant_data:

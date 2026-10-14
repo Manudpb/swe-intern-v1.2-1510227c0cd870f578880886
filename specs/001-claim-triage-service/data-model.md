@@ -29,7 +29,7 @@ failure, handled as a loop error (FR-009).
 
 | Field | Type | Rules |
 |---|---|---|
-| `images` | list of bytes + media type | From multipart `image` (single) and/or repeated `images`. 0–5 accepted; each ≤ 10 MB; media type in `image/jpeg`, `image/png`. Each is downscaled to ≤ 1024 px on the long edge and re-encoded JPEG q80 before upload (D1 token cost) |
+| `images` | list of bytes + media type | From multipart `image` (single) and/or repeated `images`. **No count cap** — the contract sets no upper bound and no requirement authorizes refusing a submission for view count (finding U2). Each ≤ 10 MB; media type in `image/jpeg`, `image/png`. Each is downscaled to ≤ 1024 px on the long edge and re-encoded JPEG q80 before upload (D1 token cost) |
 | `description` | string or None | Trimmed. Blank counts as absent |
 | `document` | bytes or None | `application/pdf`. Text extracted with pypdf, truncated to 8 000 characters. Unreadable → the report notes it (US7 scenario 7) |
 | `policy_type` | `PolicyType` | Defaults to `standard_homeowner` |
@@ -42,6 +42,9 @@ views of one incident, never separate claims.
 ## Screening
 
 ### IntakeVerdict
+
+Named `intake_validation` on the wire and in code; "IntakeVerdict" and the spec's "Intake Verdict"
+are prose aliases for the same thing (finding I3). The wire name is authoritative.
 
 | Field | Type | Rules |
 |---|---|---|
@@ -92,7 +95,7 @@ where `n = max(1, len(distinct_areas))` (FR-016) and the per-area figures come o
 | `damage_type` | `DamageType` | Copied from the final cost call's arguments (I3) |
 | `severity` | `Severity` | Copied from the final cost call's arguments (I3) |
 | `affected_areas` | list of string | Normalized, distinct, order-preserved; copied verbatim from the final cost call's arguments (I3) |
-| `damage_description` | string | Non-empty. Notes absent visual evidence for text-only (US7 scenario 2) and any source conflict (US7 scenario 6) |
+| `damage_description` | string | Non-empty. For a text-only submission the assembler appends the exact sentence `"No photographic evidence was provided; this assessment is based on the written description alone and carries lower confidence."` so the requirement is checkable rather than qualitative (finding A1, US7 scenario 2). Any source conflict is stated too (US7 scenario 6) |
 | `estimated_repair_cost` | `CostRange` | Copied from the final cost observation (I3) |
 | `urgency` | `Urgency` | Derived from severity, damage type and ongoing-risk cues |
 | `recommendation` | string | Non-empty; must survive the safety gate |

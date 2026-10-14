@@ -10,10 +10,15 @@ start:
 	docker compose up -d --wait --wait-timeout 120
 stop:
 	docker compose down
-# Implement your own application test command.
+# The project's own suite, inside the api image. No network, no paid model calls:
+# fake LLM, deterministic fake embedder, in-memory vector store (constitution Principle VI).
+# --no-deps is required: the suite must pass with Qdrant down. --build means the suite
+# always runs against the current tree, never a stale image.
+# The two development fixture directories are mounted read-only for the test run only, so
+# they stay out of the running service. ./data is NEVER mounted wholesale: it holds
+# ground-truth/, which no runtime path may reach (constitution Principle V).
 test:
-	@echo "Implement your application test command here."
-	@exit 1
+	docker compose run --rm --build --no-deps -e APP_ENV=test -v "$(CURDIR)/data/test-images:/app/data/test-images:ro" -v "$(CURDIR)/data/test-documents:/app/data/test-documents:ro" api python -m pytest -q
 health:
 	curl --fail --silent --show-error --retry 10 --retry-connrefused --retry-delay 2 http://localhost:8000/api/v1/health
 	curl --fail --silent --show-error http://localhost:3000 > /dev/null

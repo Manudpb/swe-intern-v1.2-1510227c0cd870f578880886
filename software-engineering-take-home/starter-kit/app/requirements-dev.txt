@@ -1,0 +1,12 @@
+# Test-only dependencies. Installed in the same image so `make test` is one command
+# in the environment the service actually runs in (plan.md Complexity Tracking).
+-r requirements.txt
+pytest==8.3.4
+pytest-asyncio==0.25.2
+jsonschema==4.23.0
+# Without this, jsonschema's FormatChecker silently skips date-time and the trace
+# timestamp assertions become decorative (research D12).
+rfc3339-validator==0.1.4
+referencing==0.35.1
+pyyaml==6.0.2
+beautifulsoup4==4.12.3
